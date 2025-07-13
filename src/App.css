@@ -120,18 +120,12 @@ button:hover {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.4;
-  /* Remove single-line restriction */
-  /* white-space: nowrap; */
-
-  /* Allow text to wrap for up to 2 lines before adding "..." */
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  /* Reserve space for two lines to keep card heights consistent */
-  min-height: 2.8rem; /* (line-height * font-size * 2) */
+  min-height: 2.8rem;
 }
 
 .movie-info .year {
