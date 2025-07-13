@@ -7,16 +7,6 @@ import MovieCard from './MovieCard';
 
 const API_URL = 'https://www.omdbapi.com?apikey=16577566'
 
-const movie =
-  {
-    "Title": "The Thirteenth Floor",
-    "Year": "1999",
-    "imdbID": "tt0139809",
-    "Type": "movie",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BNGY0NjNiMGQtNGQwNy00YmMwLThhZmQtNzQ1OWUwOTE3NzhjXkEyXkFqcGc@._V1_SX300.jpg"
-}
-
-
 const App = () => {
 
   const [movies, setMovies] = useState([]);
@@ -75,7 +65,7 @@ const App = () => {
       ? (
         <div className='container'>
           {movies.map((movie) =>
-            <MovieCard movie={movie} />
+            <MovieCard key={movie.imdbID} movie={movie} />
           )}
         </div>
       ) : (
